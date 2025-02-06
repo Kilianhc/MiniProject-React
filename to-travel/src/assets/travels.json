@@ -1,0 +1,93 @@
+[
+    {
+        "_id": "1",
+        "country": "Turkey",
+        "city": "Istambul",
+        "visited": true,
+        "year": 2012
+    },
+    {   "_id": "2",
+        "country": "Iceland",
+        "city": "Reykjiavik",
+        "visited": false,
+        "year": false
+    },
+    {
+        "_id": "3",
+        "country": "Ireland",
+        "city": "Dublín",
+        "visited": true,
+        "year": 2018
+    },
+    {
+        "_id": "4",
+        "country": "North Ireland",
+        "city": "Belfast",
+        "visited": true,
+        "year": 2018
+    },
+    {
+        "_id": "5",
+        "country": "Germany",
+        "city": "Berlín",
+        "visited": true,
+        "year": 2019
+    },
+    {
+        "_id": "6",
+        "country": "Austria",
+        "city": "Viena",
+        "visited": true,
+        "year": 2020
+    },
+    {
+        "_id": "7",
+        "country": "Hungary",
+        "city": "Budapest",
+        "visited": true,
+        "year": 2020
+    },
+    {
+        "_id": "8",
+        "country": "República Checa",
+        "city": "Prague",
+        "visited": true,
+        "year": 2020
+    },
+    {
+        "_id": "9",
+        "country": "Thailand",
+        "city": "Bangkok, Koh Samui, Koh Phangan",
+        "visited": true,
+        "year": 2022
+    },
+    {
+        "_id": "10",
+        "country": "South Korea",
+        "city": "Seul, Busan",
+        "visited": true,
+        "year": 2023
+    },
+    {
+        "_id": "11",
+        "country": "Portugal",
+        "city": "Lisboa",
+        "visited": true,
+        "year": 2023
+    },
+    {
+        "_id": "12",
+        "country": "Italy",
+        "city": "Florencia",
+        "visited": true,
+        "year": 2024
+    },
+    {
+        "_id": "13",
+        "country": "Poland",
+        "city": "Gdansk, Cracovia",
+        "visited": true,
+        "year": 2024
+    }
+
+]
