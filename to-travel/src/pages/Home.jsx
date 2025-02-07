@@ -3,9 +3,7 @@ import TravelsData from "../assets/travels.json"
 import { useState } from "react"
 import TravelCard from "../components/TravelCard"
 
-export default function Home() {
-
-    const [travels, setTravels] = useState(TravelsData)
+export default function Home({travels}) {
 
     const deleteButton = (id) => {
         const filteredTravels = travels.filter((travel) => {
@@ -17,17 +15,12 @@ export default function Home() {
     return (
         <div id="homePage">
             <h1 id="title">Travel´s List</h1>
-            <div id="items">
-                <span>Country</span>
-                <span>City</span>
-                <span>Visited</span>
-                <span>Year</span>
-            </div>
 
             {travels && travels.map((travel) => (
-                <div key={travel._id}>
+                <div id key={travel._id}>
                     <TravelCard {...travel} deleteButton={deleteButton}/>
                     <Link to={`/travels/${travel._id}`}><button>Ver detalles</button></Link>
+                    <hr />
             </div>
         ))}
         </div>

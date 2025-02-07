@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -14,18 +12,23 @@
 }
 
 #navBar {
- display: flex;
- justify-content: center;
- align-items: center;
- background-color: black;
- color: white;
- font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    font-size: 30px;
 }
 
 #logo {
-    height: 200px;
-    width: 200px;
-    margin-left: 20px;
+    height: 100px;
+    width: 150px;
+    margin: 10px;
+}
+
+#navTitle {
+    flex-grow: 1;
+    text-align: center;
 }
 
 .mainContainer {
@@ -73,8 +76,104 @@
     cursor: pointer;
 }
 
-#homePage, #aboutPage, #detailsPage, #errorPage {
+#homePage,
+#aboutPage,
+#detailsPage,
+#errorPage,
+#form {
     flex: 1;
     text-align: center;
 }
 
+#homePage button {
+    margin-bottom: 10px;
+}
+
+#check {
+    height: 30px;
+}
+
+#items {
+    display: flex;
+    justify-content: space-around;
+}
+
+#itemsTravels {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#buttons {
+    display: flex;
+    justify-content: end;
+}
+
+#buttons button {
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+#travelCard {
+    margin: 30px;
+    align-items: center;
+}
+
+#form span {
+    font-size: xx-large;
+}
+
+form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: x-large;
+    font-weight:900;
+    color:#ccc;
+    background-color: black;
+}
+
+label {
+    display: flex;
+    text-align: left;
+    margin: 3rem;
+    height: 35px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label input, select {
+    margin-left: 10rem;
+    font-size: large;
+    color: black;
+    background-color:#ccc;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+form span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 10px;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+button[type="submit"] {
+    margin-top: 50px;
+    padding: 10px;
+    width: 15rem;
+    font-size: x-large;
+    background-color:rgb(129, 196, 63);
+    border-radius: 50px;
+    font-size: xx-large;
+}

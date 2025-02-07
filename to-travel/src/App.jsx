@@ -9,8 +9,15 @@ import TravelsAdd from "./pages/TravelsAdd";
 import TravelDetails from "./pages/Traveldetails";
 import ErrorPage from "./pages/ErrorPage";
 import './App.css'
+import TravelsData from "./assets/travels.json"
 
 export default function App() {
+
+  const [travels, setTravels] = useState(TravelsData)
+
+  const handleAddTravel = (newTravel) => {
+    setTravels([...travels, newTravel])
+  }
 
   return (
     <div className="app">
@@ -18,10 +25,10 @@ export default function App() {
       <div className="mainContainer">
       <SideBar />
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home travels={travels}/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/travels/:travelId" element={<TravelDetails/>} />
-        <Route path="/travels" element={<TravelsAdd/>} />
+        <Route path="/travels" element={<TravelsAdd handleAddTravel={handleAddTravel}/>} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       </div>
