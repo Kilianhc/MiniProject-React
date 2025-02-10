@@ -3,7 +3,7 @@ import TravelsAdd from "../pages/TravelsAdd"
 import check from "../assets/images/check.png.png"
 import uncheck from "../assets/images/uncheck.png.png"
 
-export default function TravelCard({ _id, country, city, visited, year, deleteButton }) {
+export default function TravelCard({ _id, country, cities, visited, year, deleteButton }) {
 
 
 
@@ -11,14 +11,12 @@ export default function TravelCard({ _id, country, city, visited, year, deleteBu
         <div id="travelCard">
             <div id="itemsTravels">
                 <h2>{country}</h2>
-                <h3>{city}</h3>
+                <h3>{cities}</h3>
                 <p>
                     {visited === true && <img id="check" src={check} alt="check"></img>}
                     {visited === false && <img id="check" src={uncheck} alt="uncheck"></img>}
                 </p>
-                <p>
-                    {visited === true && <span>{year}</span>}
-                </p>
+                <p>{year}</p>
             </div>
 
             <div id="buttons">

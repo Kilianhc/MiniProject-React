@@ -15,6 +15,13 @@ export default function App() {
 
   const [travels, setTravels] = useState(TravelsData)
 
+  const deleteButton = (id) => {
+    const filteredTravels = travels.filter((travel) => {
+        return travel._id !== id
+    })
+    setTravels(filteredTravels)
+}
+
   const handleAddTravel = (newTravel) => {
     setTravels([...travels, newTravel])
   }
@@ -25,7 +32,7 @@ export default function App() {
       <div className="mainContainer">
       <SideBar />
       <Routes>
-        <Route path="/" element={<Home travels={travels}/>} />
+        <Route path="/" element={<Home travels={travels} deleteButton={deleteButton}/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/travels/:travelId" element={<TravelDetails/>} />
         <Route path="/travels" element={<TravelsAdd handleAddTravel={handleAddTravel}/>} />

@@ -9,11 +9,11 @@ export default function TravelsAdd({handleAddTravel}) {
     const [year, setYear] = useState(2025)
 
     const handleInput = (e) => {
-        const {name, type, value, checked} = e.target
+        const {name, value} = e.target
         switch (name) {
             case "country": setCountry(value); break;
             case "cities": setCities(value); break;
-            case "visited": setVisited(checked); break;
+            case "visited": setVisited(JSON.parse(value)); break;
             case "year": setYear(value); break;
         }
     }
@@ -42,8 +42,8 @@ export default function TravelsAdd({handleAddTravel}) {
                     </label>
                     <label>Are you visited this country?
                         <select name="visited" value={visited} onChange={handleInput}>
-                            <option value={true}>Yes!</option>
-                            <option value={false}>Not...yet</option>
+                            <option value="true">Yes!</option>
+                            <option value="false">Not...yet</option>
                         </select>
                     </label>
                     <label>Year of your travel
