@@ -14,6 +14,7 @@ import TravelsData from "./assets/travels.json"
 export default function App() {
 
   const [travels, setTravels] = useState(TravelsData)
+  const [travelToEdit, setTravelToEdit] = useState(null)
 
   const deleteButton = (id) => {
     const filteredTravels = travels.filter((travel) => {
@@ -23,7 +24,13 @@ export default function App() {
 }
 
   const handleAddTravel = (newTravel) => {
-    setTravels([...travels, newTravel])
+    if (travelToEdit) {
+      setTravels(travels.map((travel) => (travel._id === travelToEdit._id ? newTravel : travel)))
+      setTravelToEdit(null)
+    } else {
+      setTravels([...travels, { _id: Date.now(),...newTravel}])
+    }
+    
   }
 
   return (
@@ -32,10 +39,10 @@ export default function App() {
       <div className="mainContainer">
       <SideBar />
       <Routes>
-        <Route path="/" element={<Home travels={travels} deleteButton={deleteButton}/>} />
+        <Route path="/" element={<Home travels={travels} deleteButton={deleteButton} setTravelToEdit={setTravelToEdit}/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/travels/:travelId" element={<TravelDetails/>} />
-        <Route path="/travels" element={<TravelsAdd handleAddTravel={handleAddTravel}/>} />
+        <Route path="/travels" element={<TravelsAdd handleAddTravel={handleAddTravel} travelToEdit={travelToEdit}/>} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       </div>

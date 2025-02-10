@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: ; */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .app {
@@ -58,6 +58,8 @@
     display: flex;
     flex-direction: column;
     padding: 0;
+    position: fixed;
+    width: 15%;
 }
 
 #menuList a {
@@ -98,25 +100,34 @@
     justify-content: space-around;
 }
 
-#itemsTravels {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#buttons {
-    display: flex;
-    justify-content: end;
-}
-
 #buttons button {
     margin-right: 20px;
-    margin-top: 20px;
+}
+
+#travelHeader {
+    display: flex;
+    border: 2px solid black;
+    background-color: #ccc;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
 }
 
 #travelCard {
-    margin: 30px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+#containerTravel {
+    border: 2px solid black;
+}
+
+#travelCard span, #travelHeader span {
+    flex: 1;
+    text-align: center;
 }
 
 #form span {

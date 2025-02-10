@@ -3,27 +3,27 @@ import TravelsAdd from "../pages/TravelsAdd"
 import check from "../assets/images/check.png.png"
 import uncheck from "../assets/images/uncheck.png.png"
 
-export default function TravelCard({ _id, country, cities, visited, year, deleteButton }) {
+export default function TravelCard({ _id, country, cities, visited, year, deleteButton, setTravelToEdit }) {
 
 
 
     return (
         <div id="travelCard">
-            <div id="itemsTravels">
-                <h2>{country}</h2>
-                <h3>{cities}</h3>
-                <p>
+            
+                <span>{country}</span>
+                <span>{cities}</span>
+                <span>
                     {visited === true && <img id="check" src={check} alt="check"></img>}
                     {visited === false && <img id="check" src={uncheck} alt="uncheck"></img>}
-                </p>
-                <p>{year}</p>
-            </div>
+                </span>
+                <span>{year}</span>
 
-            <div id="buttons">
+            <span id="buttons">
                 <button onClick={() => deleteButton(_id)}>Delete</button>
-                <Link to={"/travels"}><button>Update</button></Link>
-                
-            </div>
+                <Link to={"/travels"}>
+                <button onClick={() => setTravelToEdit({_id, country, cities, visited, year})}>Update</button>
+                </Link>   
+            </span>
 
         </div>
     )

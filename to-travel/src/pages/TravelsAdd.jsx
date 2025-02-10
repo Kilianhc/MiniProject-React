@@ -1,12 +1,24 @@
+import { useEffect } from "react"
 import { useState } from "react"
 import {Link} from "react-router-dom"
 
-export default function TravelsAdd({handleAddTravel}) {
+export default function TravelsAdd({handleAddTravel, travelToEdit}) {
 
     const [country, setCountry] = useState(" ")
     const [cities, setCities] = useState(" ")
     const [visited, setVisited] = useState(false)
     const [year, setYear] = useState(2025)
+    const [isEditing, setIsEditing] = useState(false)
+
+    useEffect(() => {
+        if(travelToEdit) {
+            setCountry(travelToEdit.country)
+            setCities(travelToEdit.cities)
+            setVisited(travelToEdit.visited)
+            setYear(travelToEdit.year)
+            setIsEditing(true)
+        }
+    }, [travelToEdit])
 
     const handleInput = (e) => {
         const {name, value} = e.target
