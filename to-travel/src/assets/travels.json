@@ -4,90 +4,116 @@
         "country": "Turkey",
         "cities": "Istambul",
         "visited": true,
-        "year": 2012
+        "year": 2012,
+        "description": "Un cruce de culturas fascinante donde Oriente y Occidente se encuentran. Me encantó perderme en el Gran Bazar, admirar la majestuosidad de Santa Sofía y navegar por el Bósforo al atardecer. La comida, especialmente el baklava y el kebab, fue inolvidable.",
+        "image": "/src/assets/images/Turquia.jpg"
     },
     {   "_id": "2",
         "country": "Iceland",
         "cities": "Reykjiavik",
         "visited": false,
-        "year": false
+        "year": false,
+        "description": "Naturaleza en su forma más pura y salvaje. Desde auroras boreales hasta geiseres y cascadas inmensas, cada rincón parece otro planeta. Me encantaria la Laguna Azul y la sensación de estar en un lugar donde la Tierra sigue viva.",
+        "image": "/src/assets/images/Turquia.jpg"
     },
     {
         "_id": "3",
         "country": "Ireland",
         "cities": "Dublín",
         "visited": true,
-        "year": 2018
+        "year": 2018,
+        "description": "Un país de paisajes verdes infinitos, acantilados impresionantes y pubs acogedores con música en vivo. Dublín tiene una vibra joven y vibrante, mientras que el interior es pura magia celta. La Guinness aquí sabe diferente, ¡más auténtica!",
+        "image": "/src/assets/images/IRELAND.jpg"
     },
     {
         "_id": "4",
         "country": "North Ireland",
         "cities": "Belfast",
         "visited": true,
-        "year": 2018
+        "year": 2018,
+        "description": "Dramáticos paisajes como la Calzada del Gigante y escenarios de Game of Thrones. Belfast es histórica y llena de arte callejero impactante. Disfruté recorrer la Costa de Antrim y sentir el misterio de sus castillos en ruinas.",
+        "image": "/src/assets/images/Turquia.jpg"
     },
     {
         "_id": "5",
         "country": "Germany",
         "cities": "Berlín",
         "visited": true,
-        "year": 2019
+        "year": 2019,
+        "description": "Una ciudad con una historia potente y una escena cultural vibrante. Me impactó el Muro de Berlín y la isla de los museos. Además, su vida nocturna y su espíritu alternativo la hacen única, siempre hay algo nuevo por descubrir.",
+        "image": "/src/assets/images/Alemania.jpg"
     },
     {
         "_id": "6",
         "country": "Austria",
         "cities": "Viena",
         "visited": true,
-        "year": 2020
+        "year": 2020,
+        "description": "Un país de paisajes alpinos impresionantes y ciudades elegantes como Viena y Salzburgo. La música clásica está en todas partes, y caminar por los palacios de Sissi fue como viajar en el tiempo. Amé la mezcla de naturaleza y cultura refinada.",
+        "image": "/src/assets/images/Austria.jpg"
     },
     {
         "_id": "7",
         "country": "Hungary",
         "cities": "Budapest",
         "visited": true,
-        "year": 2020
+        "year": 2020,
+        "description": "Una ciudad vibrante dividida por el Danubio, con baños termales espectaculares. Me enamoré de su arquitectura neogótica y los bares en ruinas, especialmente en el Barrio Judío. Subir al Bastión de los Pescadores para ver el atardecer fue mágico.",
+        "image": "/src/assets/images/Hungria.webp"
     },
     {
         "_id": "8",
         "country": "República Checa",
         "cities": "Prague",
         "visited": true,
-        "year": 2020
+        "year": 2020,
+        "description": "Praga es un cuento de hadas con su castillo imponente y calles empedradas. Disfruté cada cerveza artesanal y cada café con vistas al Reloj Astronómico. Es un país con historia en cada rincón, pero con una energía joven y bohemia.",
+        "image": "/src/assets/images/Rep.Checa.jpg"
     },
     {
         "_id": "9",
         "country": "Thailand",
         "cities": "Bangkok, Koh Samui, Koh Phangan",
         "visited": true,
-        "year": 2022
+        "year": 2022,
+        "description": "Un paraíso tropical con templos dorados, playas de ensueño y comida callejera deliciosa. Pasear por Bangkok de noche es una locura maravillosa. Me fascinó la espiritualidad en Chiang Mai y la calma de las islas como Koh Phangan.",
+        "image": "/src/assets/images/Tailandia.webp"
     },
     {
         "_id": "10",
         "country": "South Korea",
         "cities": "Seul, Busan",
         "visited": true,
-        "year": 2023
+        "year": 2023,
+        "description": "Un país de contrastes entre lo ultramoderno y la tradición. Me encantó la comida (bibimbap y tteokbokki), los palacios en Seúl y la energía de Hongdae. Además, la calidez de la gente y la cultura del K-pop y los cafés temáticos hacen que sea único.",
+        "image": "/src/assets/images/Corea.webp"
     },
     {
         "_id": "11",
         "country": "Portugal",
         "cities": "Lisboa",
         "visited": true,
-        "year": 2023
+        "year": 2023,
+        "description": "Calles adoquinadas, tranvías nostálgicos y una gastronomía exquisita. Lisboa es encantadora con su fado melancólico, mientras que Oporto me sorprendió con sus vistas al río Duero y su vino. Me atrapó la calidez de su gente.",
+        "image": "/src/assets/images/Portugal.webp"
     },
     {
         "_id": "12",
         "country": "Italy",
         "cities": "Florencia",
         "visited": true,
-        "year": 2024
+        "year": 2024,
+        "description": "Un museo al aire libre donde cada calle es arte. El Duomo es impresionante, pero lo que más disfruté fue ver el atardecer desde la Piazzale Michelangelo. La comida toscana, con su pasta fresca y vinos, es un placer absoluto.",
+        "image": "/src/assets/images/Florencia.webp"
     },
     {
         "_id": "13",
         "country": "Poland",
         "cities": "Gdansk, Cracovia",
         "visited": true,
-        "year": 2024
+        "year": 2024,
+        "description": "Un país con ciudades hermosas como Cracovia y Varsovia, llenas de historia y resiliencia. Me conmovió visitar Auschwitz, pero también disfruté la energía joven y creativa del país. La comida, con sus pierogi y sopas, es puro confort.",
+        "image": "/src/assets/images/Polonia.webp"
     }
 
 ]

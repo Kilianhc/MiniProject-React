@@ -19,9 +19,11 @@ export default function TravelCard({ _id, country, cities, visited, year, delete
                 <span>{year}</span>
 
             <span id="buttons">
+                <Link to={"/"}>
                 <button onClick={() => deleteButton(_id)}>Delete</button>
+                </Link>
                 <Link to={"/travels"}>
-                <button onClick={() => setTravelToEdit({_id, country, cities, visited, year})}>Update</button>
+                <button onClick={() => setTravelToEdit({_id, country, cities, visited, year})}>Edit</button>
                 </Link>   
             </span>
 

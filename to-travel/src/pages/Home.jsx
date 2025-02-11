@@ -1,9 +1,9 @@
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import TravelsData from "../assets/travels.json"
 import { useState } from "react"
 import TravelCard from "../components/TravelCard"
 
-export default function Home({travels, deleteButton, setTravelToEdit}) {
+export default function Home({ travels, deleteButton, setTravelToEdit }) {
 
     return (
         <div id="homePage">
@@ -17,11 +17,12 @@ export default function Home({travels, deleteButton, setTravelToEdit}) {
             </div>
 
             {travels.map((travel) => (
-                <div id="containerTravel" key={travel._id}>
-                    <TravelCard {...travel} deleteButton={deleteButton} setTravelToEdit={setTravelToEdit}/>
-                    <Link to={`/travels/${travel._id}`}><button>Ver detalles</button></Link>
-                </div>
-        ))}
+                <Link to={`/travels/${travel._id}`}>
+                    <div id="containerTravel" key={travel._id}>
+                        <TravelCard {...travel} deleteButton={deleteButton} setTravelToEdit={setTravelToEdit} />
+                    </div>
+                </Link>
+            ))}
         </div>
     )
 }

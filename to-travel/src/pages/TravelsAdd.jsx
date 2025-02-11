@@ -8,6 +8,7 @@ export default function TravelsAdd({handleAddTravel, travelToEdit}) {
     const [cities, setCities] = useState(" ")
     const [visited, setVisited] = useState(false)
     const [year, setYear] = useState(2025)
+    const [why, setWhy] = useState(" ")
     const [isEditing, setIsEditing] = useState(false)
 
     useEffect(() => {
@@ -16,6 +17,7 @@ export default function TravelsAdd({handleAddTravel, travelToEdit}) {
             setCities(travelToEdit.cities)
             setVisited(travelToEdit.visited)
             setYear(travelToEdit.year)
+            setWhy(travelToEdit.why)
             setIsEditing(true)
         }
     }, [travelToEdit])
@@ -27,18 +29,20 @@ export default function TravelsAdd({handleAddTravel, travelToEdit}) {
             case "cities": setCities(value); break;
             case "visited": setVisited(JSON.parse(value)); break;
             case "year": setYear(value); break;
+            case "why": setWhy(value); break;
         }
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const newTravel = {country, cities, visited, year}
+        const newTravel = {country, cities, visited, year, why}
         handleAddTravel(newTravel)
 
         setCountry(" ")
         setCities(" ")
         setVisited(false)
         setYear(2025)
+        setWhy(" ")
     }
 
     return (
@@ -60,6 +64,9 @@ export default function TravelsAdd({handleAddTravel, travelToEdit}) {
                     </label>
                     <label>Year of your travel
                         <input name="year" type="text" value={year} placeholder="Year of your travel" onChange={handleInput} />
+                    </label>
+                    <label>Why do you like this travel?
+                        <textarea name="why" id="whyForm" value={why} placeholder="Because..." onChange={handleInput} />
                     </label>
                     <button type="submit">Save</button>
                  </div>
