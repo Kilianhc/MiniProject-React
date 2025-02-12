@@ -41,7 +41,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home travels={travels} deleteButton={deleteButton} setTravelToEdit={setTravelToEdit}/>} />
         <Route path="/about" element={<About/>} />
-        <Route path="/travels/:travelId" element={<TravelDetails/>} />
+        <Route path="/travels/:travelId" element={<TravelDetails travels={travels}/>} />
         <Route path="/travels" element={<TravelsAdd handleAddTravel={handleAddTravel} travelToEdit={travelToEdit}/>} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>

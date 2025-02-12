@@ -1,4 +1,4 @@
-import logo404 from "../assets/images/logo.png"
+import logo404 from "../assets/images/error.jpg"
 import {Link} from "react-router-dom"
 import Home from "./Home"
 
@@ -7,7 +7,7 @@ export default function ErrorPage() {
         <div id="errorPage">
             <img src={logo404} alt="logo404" />
             <br />
-            <h1>Error 404!</h1>
+            <h1>404<br />Not Found</h1>
             <Link to="/">
             <button>Back to Home</button>
             </Link>

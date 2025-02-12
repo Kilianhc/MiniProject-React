@@ -1,15 +1,18 @@
 import { useEffect } from "react"
 import { useState } from "react"
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 
 export default function TravelsAdd({handleAddTravel, travelToEdit}) {
 
-    const [country, setCountry] = useState(" ")
-    const [cities, setCities] = useState(" ")
+    const [country, setCountry] = useState()
+    const [cities, setCities] = useState()
     const [visited, setVisited] = useState(false)
-    const [year, setYear] = useState(2025)
-    const [why, setWhy] = useState(" ")
+    const [year, setYear] = useState()
+    const [description, setDescription] = useState()
+    const [image, setImage] = useState()
     const [isEditing, setIsEditing] = useState(false)
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         if(travelToEdit) {
@@ -17,7 +20,8 @@ export default function TravelsAdd({handleAddTravel, travelToEdit}) {
             setCities(travelToEdit.cities)
             setVisited(travelToEdit.visited)
             setYear(travelToEdit.year)
-            setWhy(travelToEdit.why)
+            setDescription(travelToEdit.description)
+            setImage(travelToEdit.image)
             setIsEditing(true)
         }
     }, [travelToEdit])
@@ -29,26 +33,30 @@ export default function TravelsAdd({handleAddTravel, travelToEdit}) {
             case "cities": setCities(value); break;
             case "visited": setVisited(JSON.parse(value)); break;
             case "year": setYear(value); break;
-            case "why": setWhy(value); break;
+            case "description": setDescription(value); break;
+            case "image": setImage(value); break;
         }
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const newTravel = {country, cities, visited, year, why}
+        const newTravel = {country, cities, visited, year, description, image}
         handleAddTravel(newTravel)
 
         setCountry(" ")
         setCities(" ")
         setVisited(false)
-        setYear(2025)
-        setWhy(" ")
+        setYear(" ")
+        setDescription(" ")
+        setImage(" ")
+
+        navigate("/")
     }
 
     return (
         <div id="form">
             <form onSubmit={handleSubmit}>
-                 <span>Add or Update a Travel</span>
+                 <span id="formTitle">Add or Update a Travel</span>
                  <div>
                     <label>Country
                         <input name="country" type="text" value={country} placeholder="Country" onChange={handleInput}/>
@@ -66,7 +74,10 @@ export default function TravelsAdd({handleAddTravel, travelToEdit}) {
                         <input name="year" type="text" value={year} placeholder="Year of your travel" onChange={handleInput} />
                     </label>
                     <label>Why do you like this travel?
-                        <textarea name="why" id="whyForm" value={why} placeholder="Because..." onChange={handleInput} />
+                        <textarea name="description" value={description} placeholder="Because..." onChange={handleInput} />
+                    </label>
+                    <label>Image URL
+                        <input name="image" type="text" value={image} placeholder="https://example.com" onChange={handleInput} />
                     </label>
                     <button type="submit">Save</button>
                  </div>
