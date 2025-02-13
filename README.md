@@ -10,20 +10,6 @@ React Router
 
 CSS
 
-📂 Estructura del proyecto
-
-📂 to-travel-list-app
-├── 📂 public
-├── 📂 src
-│   ├── 📂 assets
-│   ├── 📂 components
-│   ├── 📂 pages
-│   ├── App.js
-│   ├── index.js
-│   └── App.css
-├── .gitignore
-├── package.json
-└── README.md
 
 🚀 Instalación y ejecución
 
@@ -46,23 +32,19 @@ npm start
 📌 Funcionalidades
 
 ✅ Agregar un nuevo viaje.
+
 ✅ Editar viajes existentes.
+
 ✅ Eliminar viajes.
+
 ✅ Visualizar detalles de cada viaje.
+
 ✅ Interfaz sencilla e intuitiva.
-
-📸 Capturas de pantalla
-
-
 
 
 👤 Autor
 
 Kilian D. Hernández Chirino
-
-GitHub
-
-LinkedIn
 
 📜 Licencia
 
