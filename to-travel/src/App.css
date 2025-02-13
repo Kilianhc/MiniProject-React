@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: none;
 }
 
@@ -100,12 +100,13 @@
     align-content: center;
 }
 
-#errorPage h1{
+#errorPage h1 {
     font-size: 50px;
 }
 
-#errorPage img, h1 {
-    margin: 30px;   
+#errorPage img,
+h1 {
+    margin: 30px;
 }
 
 #check {
@@ -117,13 +118,14 @@
     justify-content: space-around;
 }
 
-#buttons button, #errorPage button {
+#buttons button,
+#errorPage button {
     margin-top: 5px;
     padding: 5px;
     width: 7rem;
     border-radius: 20px;
     cursor: pointer;
-    font-size:medium;
+    font-size: medium;
 }
 
 #deleteButton {
@@ -164,7 +166,8 @@
     cursor: default;
 }
 
-#travelCard span, #travelHeader span {
+#travelCard span,
+#travelHeader span {
     flex: 1;
     text-align: center;
 }
@@ -185,8 +188,8 @@ form {
     border-radius: 0.5rem;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     font-size: x-large;
-    font-weight:900;
-    color:#ccc;
+    font-weight: 900;
+    color: #ccc;
     background-color: black;
 }
 
@@ -199,11 +202,13 @@ label {
     justify-content: space-between;
 }
 
-label input, select, textarea {
+label input,
+select,
+textarea {
     margin-left: 5rem;
     font-size: large;
     color: black;
-    background-color:#ccc;
+    background-color: #ccc;
     padding: 10px;
     border-radius: 50px;
 }
@@ -213,13 +218,14 @@ button[type="submit"] {
     padding: 5px;
     width: 15rem;
     font-size: x-large;
-    background-color:rgb(129, 196, 63);
+    background-color: rgb(129, 196, 63);
     border-radius: 50px;
     font-size: xx-large;
     cursor: pointer;
 }
 
-#images, #errorPage img {
+#images,
+#errorPage img {
     margin: 10px 0;
     max-height: 450px;
     max-width: 700px;
@@ -237,21 +243,21 @@ button[type="submit"] {
 }
 
 #detailsPage p {
-    background-color:#ccc;
+    background-color: #ccc;
     color: black;
 }
 
 #detailsRow span {
     margin: 20px;
-    font-size:xx-large;
+    font-size: xx-large;
 }
 
-#detailsPage p{
+#detailsPage p {
     width: 700px;
     line-height: 30px;
 }
 
-#detailsPage h1{
+#detailsPage h1 {
     margin: 15px;
     font-size: 40px;
 }

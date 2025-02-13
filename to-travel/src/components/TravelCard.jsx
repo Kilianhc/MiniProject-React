@@ -14,25 +14,25 @@ export default function TravelCard({ _id, country, cities, visited, year, descri
 
     return (
         <div id="travelCard">
-                <span>{country}</span>
-                <span>{cities}</span>
-                <span>
-                    {visited === true && <img id="check" src={check} alt="check"></img>}
-                    {visited === false && <img id="check" src={uncheck} alt="uncheck"></img>}
-                </span>
-                <span>{year}</span>
-                
+            <span>{country}</span>
+            <span>{cities}</span>
+            <span>
+                {visited === true && <img id="check" src={check} alt="check"></img>}
+                {visited === false && <img id="check" src={uncheck} alt="uncheck"></img>}
+            </span>
+            <span>{year}</span>
+
             <span id="buttons">
                 <Link to={"/"}>
-                <button id="deleteButton" onClick={() => deleteButton(_id)}>Delete</button><br />
+                    <button id="deleteButton" onClick={() => deleteButton(_id)}>Delete</button><br />
                 </Link>
                 <button id="updateButton" onClick={handleEdit}>Edit</button> <br />
                 <Link to={`/travels/${_id}`}>
-                <button>Details</button>
+                    <button>Details</button>
                 </Link>
             </span>
-            
-            
+
+
 
         </div>
     )

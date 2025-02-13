@@ -35,7 +35,8 @@
         "description": "Un cruce de culturas fascinante donde Oriente y Occidente se encuentran. Me encantó perderme en el Gran Bazar, admirar la majestuosidad de Santa Sofía y navegar por el Bósforo al atardecer. La comida, especialmente el baklava y el kebab, fue inolvidable.",
         "image": "/src/assets/images/Turquia.jpg"
     },
-    {   "_id": "5",
+    {
+        "_id": "5",
         "country": "Iceland",
         "cities": "Reykjiavik",
         "visited": false,
@@ -105,7 +106,7 @@
         "year": 2023,
         "description": "Calles adoquinadas, tranvías nostálgicos y una gastronomía exquisita. Lisboa es encantadora con su fado melancólico, mientras que Oporto me sorprendió con sus vistas al río Duero y su vino. Me atrapó la calidez de su gente.",
         "image": "/src/assets/images/Portugal.webp"
-    }, 
+    },
     {
         "_id": "13",
         "country": "Poland",

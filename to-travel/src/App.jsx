@@ -18,33 +18,33 @@ export default function App() {
 
   const deleteButton = (id) => {
     const filteredTravels = travels.filter((travel) => {
-        return travel._id !== id
+      return travel._id !== id
     })
     setTravels(filteredTravels)
-}
+  }
 
   const handleAddTravel = (newTravel) => {
     if (travelToEdit) {
       setTravels(travels.map((travel) => (travel._id === travelToEdit._id ? newTravel : travel)))
       setTravelToEdit(null)
     } else {
-      setTravels([...travels, { _id: Date.now(),...newTravel}])
+      setTravels([...travels, { _id: Date.now(), ...newTravel }])
     }
-    
+
   }
 
   return (
     <div className="app">
       <NavBar />
       <div className="mainContainer">
-      <SideBar />
-      <Routes>
-        <Route path="/" element={<Home travels={travels} deleteButton={deleteButton} setTravelToEdit={setTravelToEdit}/>} />
-        <Route path="/about" element={<About/>} />
-        <Route path="/travels/:travelId" element={<TravelDetails travels={travels}/>} />
-        <Route path="/travels" element={<TravelsAdd handleAddTravel={handleAddTravel} travelToEdit={travelToEdit}/>} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
+        <SideBar />
+        <Routes>
+          <Route path="/" element={<Home travels={travels} deleteButton={deleteButton} setTravelToEdit={setTravelToEdit} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/travels/:travelId" element={<TravelDetails travels={travels} />} />
+          <Route path="/travels" element={<TravelsAdd handleAddTravel={handleAddTravel} travelToEdit={travelToEdit} />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
       </div>
       <Footer />
     </div>

@@ -17,9 +17,9 @@ export default function Home({ travels, deleteButton, setTravelToEdit }) {
             </div>
 
             {travels.map((travel) => (
-                    <div id="containerTravel" key={travel._id}>
-                        <TravelCard {...travel} deleteButton={deleteButton} setTravelToEdit={setTravelToEdit} />
-                    </div>
+                <div id="containerTravel" key={travel._id}>
+                    <TravelCard {...travel} deleteButton={deleteButton} setTravelToEdit={setTravelToEdit} />
+                </div>
             ))}
         </div>
     )

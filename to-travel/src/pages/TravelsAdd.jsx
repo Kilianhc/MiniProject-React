@@ -1,8 +1,8 @@
 import { useEffect } from "react"
 import { useState } from "react"
-import {Link, useNavigate} from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
-export default function TravelsAdd({handleAddTravel, travelToEdit}) {
+export default function TravelsAdd({ handleAddTravel, travelToEdit }) {
 
     const [country, setCountry] = useState()
     const [cities, setCities] = useState()
@@ -15,7 +15,7 @@ export default function TravelsAdd({handleAddTravel, travelToEdit}) {
     const navigate = useNavigate()
 
     useEffect(() => {
-        if(travelToEdit) {
+        if (travelToEdit) {
             setCountry(travelToEdit.country)
             setCities(travelToEdit.cities)
             setVisited(travelToEdit.visited)
@@ -27,7 +27,7 @@ export default function TravelsAdd({handleAddTravel, travelToEdit}) {
     }, [travelToEdit])
 
     const handleInput = (e) => {
-        const {name, value} = e.target
+        const { name, value } = e.target
         switch (name) {
             case "country": setCountry(value); break;
             case "cities": setCities(value); break;
@@ -40,7 +40,7 @@ export default function TravelsAdd({handleAddTravel, travelToEdit}) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const newTravel = {country, cities, visited, year, description, image}
+        const newTravel = { country, cities, visited, year, description, image }
         handleAddTravel(newTravel)
 
         setCountry(" ")
@@ -56,10 +56,10 @@ export default function TravelsAdd({handleAddTravel, travelToEdit}) {
     return (
         <div id="form">
             <form onSubmit={handleSubmit}>
-                 <span id="formTitle">Add or Update a Travel</span>
-                 <div>
+                <span id="formTitle">Add or Update a Travel</span>
+                <div>
                     <label>Country
-                        <input name="country" type="text" value={country} placeholder="Country" onChange={handleInput}/>
+                        <input name="country" type="text" value={country} placeholder="Country" onChange={handleInput} />
                     </label>
                     <label>Cities
                         <input name="cities" type="text" value={cities} placeholder="Cities" onChange={handleInput} />
@@ -80,9 +80,9 @@ export default function TravelsAdd({handleAddTravel, travelToEdit}) {
                         <input name="image" type="text" value={image} placeholder="https://example.com" onChange={handleInput} />
                     </label>
                     <button type="submit">Save</button>
-                 </div>
+                </div>
             </form>
-            
+
         </div>
     )
 }
