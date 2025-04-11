@@ -12,7 +12,7 @@ export default function TravelDetails({ travels }) {
     return (
         <div id="detailsPage">
             <h1>{travelInfo.country}</h1>
-            <img id="images" src={travelInfo.image} alt={travelInfo.country} />
+            <img id="images" src={`${import.meta.env.BASE_URL}${travelInfo.image}`} alt={travelInfo.country} />
             <div id="detailsRow">
                 <span>{travelInfo.cities}</span>
                 <span>
