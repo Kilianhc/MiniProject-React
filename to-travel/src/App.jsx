@@ -6,7 +6,7 @@ import SideBar from "./components/Sidebar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import TravelsAdd from "./pages/TravelsAdd";
-import TravelDetails from "./pages/Traveldetails";
+import TravelDetails from "./pages/TravelDetails";
 import ErrorPage from "./pages/ErrorPage";
 import './App.css'
 import TravelsData from "./assets/travels.json"
